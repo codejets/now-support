@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/badge/(?<id>[^/]*)",
+      "dest": "api/badge.js?id=$id"
+    },
+    {
+      "src": "/badgeimage/(?<name>[^/]*)",
+      "dest": "api/badgeimage.js?name=$name"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/www/$1"
+    }
+  ],
+  "functions": {
+    "api/badge.js": {
+      "memory": 1024,
+      "maxDuration": 10,
+      "includeFiles": "api/badge/**"
+    },
+    "api/badgeimage.js": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  }
+}
