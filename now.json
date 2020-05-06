@@ -2,12 +2,12 @@
   "version": 2,
   "routes": [
     {
-      "src": "/badge/(?<id>[^/]*)",
-      "dest": "api/badge.js?id=$id"
+      "src": "/b/(?<id>[^/]*)",
+      "dest": "api/b.js?id=$id"
     },
     {
-      "src": "/badgeimage/(?<name>[^/]*)",
-      "dest": "api/badgeimage.js?name=$name"
+      "src": "/bi/(?<name>[^/]*)",
+      "dest": "api/bi.js?name=$name"
     },
     {
       "src": "/(.*)",
@@ -15,12 +15,11 @@
     }
   ],
   "functions": {
-    "api/badge.js": {
+    "api/b.js": {
       "memory": 1024,
-      "maxDuration": 10,
-      "includeFiles": "api/badge/**"
+      "maxDuration": 10
     },
-    "api/badgeimage.js": {
+    "api/bi.js": {
       "memory": 1024,
       "maxDuration": 10
     }

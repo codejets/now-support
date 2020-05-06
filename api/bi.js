@@ -1,6 +1,5 @@
 export default (req, res) => {
-	res.setHeader("content-type", "image/svg+xml");
-	res.write("<svg>a</svg>");
-	res.statusCode = 200;
-	res.statusMessage = content;
+  res.setHeader("content-type", "image/svg+xml");
+  res.write("<svg>a</svg>");
+  res.statusCode = 200;
 };
